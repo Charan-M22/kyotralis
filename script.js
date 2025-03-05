@@ -75,6 +75,34 @@ particlesJS("particles-js", {
   }, { threshold: 0.6 });
   
   sections.forEach(section => observer.observe(section));
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function updateActiveLink() {
+        let currentSection = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.id;
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(currentSection)) {
+                link.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", updateActiveLink);
+});
+
   
   // Initialize AOS for scroll animations
   AOS.init({ duration: 1000, once: true });
