@@ -116,6 +116,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   height: 100%;
   padding: 0 50px;
 }
@@ -161,7 +162,9 @@ body {
 /* Right side: image */
 .home-right {
   flex: 1;
+  height:300px;
   max-width: 45%;
+  min-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,7 +185,8 @@ body {
 }
 
 .home-image {
-  max-width: 100%;
+  width: 100%;
+  max-width: 700px;
   border-radius: 8px;
 }
 
@@ -241,8 +245,19 @@ footer {
 @media (max-width: 768px) {
   .home-container {
     flex-direction: column;
+    text-align: center;
     padding: 20px;
+    padding-top: 200px;
   }
+
+  .home-left {
+    order: 1;
+}
+
+  .home-right {
+    order: 2; /* Moves SVG below text */
+    margin-top: 20px;
+}
 
   .home-left,
   .home-right {
