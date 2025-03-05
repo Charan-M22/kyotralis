@@ -1,0 +1,263 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s;
+}
+
+/* Three column layout for navbar */
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  justify-content: center;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+}
+
+.navbar-left img {
+  width: 40px;
+  height: 40px;
+}
+
+.company-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8em;
+  color: #fcfcfc;
+}
+
+/* Nav Links with underline effect */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #00ccff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Home Section */
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.home-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 50px;
+}
+
+/* Left side: tagline & keywords */
+.home-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.tagline {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInLeft 1s forwards;
+  color: rgb(90, 197, 255);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.keywords {
+  font-size: 2.5em;
+  position: relative;
+}
+
+.keyword {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+/* Right side: image */
+.home-right {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.home-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Team Section (kept as is) */
+#team {
+  padding: 100px 50px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+#team h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: #222;
+  padding: 20px;
+  width: 300px;
+  height:400px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-photo {
+  width: 100%;
+  height: 250px;
+  background-color: #444;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #888;
+  font-size: 0.8em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .home-left,
+  .home-right {
+    max-width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    justify-content: center;
+    margin: 5px 0;
+  }
+}

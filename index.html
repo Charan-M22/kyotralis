@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyotralis - Autonomous Vehicle Alert System</title>
+  <!-- Google Fonts for a futuristic look -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- AOS Library for scroll animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets\KyotralisLogo.png" type="image/png">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" data-aos="fade-down">
+    <div class="navbar-left">
+      <img src="assets\KyotralisLogo.png" alt="Kyotralis Logo" />
+    </div>
+    <div class="navbar-center">
+      <div class="company-name"><b>KYOTRALIS</b></div>
+    </div>
+    <div class="navbar-right">
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link" id="nav-home">Home</a></li>
+        <li><a href="#team" class="nav-link" id="nav-team">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    <div class="home-container">
+      <div class="home-left" data-aos="fade-right">
+        <h1 class="tagline">Securing the Future of Autonomous Alerts</h1>
+        <div class="keywords">
+          <div class="keyword" id="keyword-text">Disseminating alerts</div>
+        </div>
+      </div>
+      <div class="home-right" data-aos="fade-left">
+        <!-- Replace with an image relevant to the theme -->
+        <img src="assets\Alert.svg" alt="Futuristic Cyber Art" class="home-image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+    <h2 data-aos="fade-up">Our Team</h2>
+    <div class="team-container">
+      <div class="team-member" data-aos="fade-up">
+        <div class=""><img src ="assets\Madhu.png" alt ="Madhu" class="team-photo"></div>
+        <h3>MADHU SHEKHAR</h3>
+        <p>Founder/CEO</p>
+        <p>San Jose, CA</p>
+      </div>
+      <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+        <div class=""><img src ="assets\Ravi.png" alt ="Ravi" class="team-photo"></div>
+        <h3>RAVI KUMAR RAJU</h3>
+        <p>Founder/COO</p>
+        <p>San Jose, CA</p>
+      </div>
+      <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+        <div class=""><img src ="assets\Venkat.png" alt ="Venkat" class="team-photo"></div>
+        <h3>VENKAT KRISHNAMURTHY</h3>
+        <p>Board Member</p>
+        <p>San Jose, CA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kyotralis. All Rights Reserved.</p>
+  </footer>
+
+  <!-- External Libraries -->
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
