@@ -21,10 +21,15 @@
 }
 
 /* Scroll Snapping & Smooth Scroll */
-html {
+html.index-page {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scroll-padding-top: 4rem;
+    overflow-x: hidden;
+}
+/* Base html for other pages */
+html:not(.index-page) {
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -397,7 +402,19 @@ body {
     /* Slight scale effect */
 }
 
+/* Navbar adjustments for active state on non-index pages */
+.nav-link.active:not(.nav-link-indicator) { /* Style for non-underlined active links */
+    color: #ffffff;
+    font-weight: 600;
+}
+.nav-link-mobile.active { /* Style for mobile active links */
+    color: #ffffff;
+    font-weight: 600;
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
 /* Body class for scroll lock */
+body.modal-open { overflow: hidden; }
 body.mobile-menu-open {
     overflow: hidden;
     /* Prevent body scroll when menu is open */
